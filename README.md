@@ -9,6 +9,8 @@ This project is based on [tomnomnom's assetfinder](https://github.com/tomnomnom/
 rAssetfinder is written in [Rust](https://www.rust-lang.org/). Make sure it is configured on your system
 to build it yourself.
 
+Otherwise check out the [Releases](https://github.com/richardschwabe/rassetfinder/releases).
+
 ```
 cargo build --release
 ```
