@@ -32,7 +32,6 @@ By default it will create a file with all findings in the same folder you run `r
 
 See the following list of sources that are implemented, including in which module you can find the code.
 ```
- Implemented:
  engine::urlscan             https://urlscan.io/
  engine::crt                 https://crt.sh
  engine::hackertarget        https://api.hackertarget.com
