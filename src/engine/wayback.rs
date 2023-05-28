@@ -3,8 +3,8 @@ use serde_tuple::{Deserialize_tuple};
 
 use crate::colors::{RED, NC, DG};
 
-
-#[derive(Deserialize_tuple, Debug)]
+#[allow(dead_code)]
+#[derive(Deserialize_tuple)]
 struct Response {
     domain: String,
     timestamp: String,

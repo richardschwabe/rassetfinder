@@ -16,15 +16,15 @@ struct ApiResponse {
 }
 
 pub async fn run(client : &reqwest::Client , domain: &str, sub_domains : &mut Vec<String> ) {
-    let VT_API_KEY : String = env::var("VT_API_KEY").unwrap_or_default();
-    if VT_API_KEY.is_empty(){
+    let vt_api_key : String = env::var("VT_API_KEY").unwrap_or_default();
+    if vt_api_key.is_empty(){
         println!("{RED}VT_API_KEY not set.{NC} Cannot scan with VirusTotal.com");
         return ;
     }
 
     let url = format!("https://www.virustotal.com/api/v3/domains/{}/subdomains?limit=100", domain);
 
-    let response = client.get(&url).header("x-apikey", VT_API_KEY).send().await.unwrap();
+    let response = client.get(&url).header("x-apikey", vt_api_key).send().await.unwrap();
 
     println!("{DG}Checking {}{NC}", &url);
     match response.status(){
