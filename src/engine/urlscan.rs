@@ -28,7 +28,7 @@ pub async fn run(client : &reqwest::Client , domain: &str, sub_domains : &mut Ve
                     for item in parsed.results{
 
                         if item.task.domain.contains(&domain){
-                            sub_domains.push(item.task.domain.trim().to_string());
+                            sub_domains.push(item.task.domain.trim().replace("*.", "").to_string());
                         }
                     }
                 }

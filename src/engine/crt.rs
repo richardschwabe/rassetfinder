@@ -14,7 +14,7 @@ impl CrtEntry{
         let mut names : Vec<String> = Vec::new();
 
         for item in lines{
-            names.push(item.to_string());
+            names.push(item.replace("*.", "").to_string());
         }
         return names;
     }

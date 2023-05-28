@@ -34,7 +34,7 @@ pub async fn run(client : &reqwest::Client , domain: &str, sub_domains : &mut Ve
                                 let domain_parts = optimised_part.rsplit(".").collect::<Vec<&str>>();
                                 let final_domain : String = domain_parts.join(".").to_string();
                                 if final_domain.contains(&domain){
-                                    sub_domains.push(final_domain);
+                                    sub_domains.push(final_domain.replace("*.", "").to_string());
                                 }
                                 break;
                             }

@@ -34,7 +34,7 @@ pub async fn run(client : &reqwest::Client , domain: &str, sub_domains : &mut Ve
                     for item in parsed.data{
                         let domain_url = item.id;
                         if domain_url.contains(&domain){
-                            sub_domains.push(domain_url);
+                            sub_domains.push(domain_url.replace("*.", "").trim().to_string());
                         }
 
                     }

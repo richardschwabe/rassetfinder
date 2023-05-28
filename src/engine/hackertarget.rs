@@ -16,7 +16,7 @@ pub async fn run(client : &reqwest::Client , domain: &str, sub_domains : &mut Ve
 
                         for col in columns{
                             if col.contains(&domain){
-                                sub_domains.push(col.to_string());
+                                sub_domains.push(col.replace("*.", "").to_string());
                             }
                             break;
                         }

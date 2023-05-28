@@ -20,7 +20,7 @@ pub async fn run(client : &reqwest::Client , domain: &str, sub_domains : &mut Ve
                     for item in parsed{
                         for dns_name in item.dns_names{
                             if dns_name.contains(&domain){
-                                sub_domains.push(dns_name);
+                                sub_domains.push(dns_name.replace("*.", "").trim().to_string());
                             }
                         }
                     }
