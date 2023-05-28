@@ -1,7 +1,10 @@
 [package]
 name = "rassetfinder"
+description = "Checks domains for subdomains and hosts via 3rd party sources."
 version = "0.2.1"
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/richardschwabe/rassetfinder"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
