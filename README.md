@@ -7,7 +7,7 @@ This project is based on [tomnomnom's assetfinder](https://github.com/tomnomnom/
 # Install
 
 rAssetfinder is written in [Rust](https://www.rust-lang.org/). Make sure it is configured on your system
-to build it yourself. No release files are currently provided via Github.
+to build it yourself.
 
 ```
 cargo build --release
