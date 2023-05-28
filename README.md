@@ -41,7 +41,7 @@ See the following list of sources that are implemented, including in which modul
  engine::virustotal          https://www.virustotal.com     Requires API Key via environment var:VT_API_KEY
 ```
 
-You can signup on virustotal.com for a free API key. Simply put your key in the environment variable VT_API_KEY. If it is not present, the tool skips checks on virustotal.com
+You can signup on virustotal.com for a free API key. Simply put your key in the environment variable `VT_API_KEY`. If it is not present, the tool skips checks on virustotal.com
 
 If you want more sources to be implemented, please submit an issue or do a PR.
 
